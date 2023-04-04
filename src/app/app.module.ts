@@ -8,6 +8,7 @@ import { BarComponent } from './components/bar/bar.component';
 import { BoardComponent } from './components/board/board.component';
 import { ColumnFieldComponent } from './components/column-field/column-field.component';
 import { ColumnComponent } from './components/column/column.component';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ColumnComponent } from './components/column/column.component';
     BoardComponent,
     ColumnFieldComponent,
     ColumnComponent,
+    TaskComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
