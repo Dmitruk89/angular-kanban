@@ -15,14 +15,38 @@ export class ColumnFieldComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  ideas = [
+  columns: string[] = ['ideas', 'todo', 'in progress', 'done'];
+
+  ideas: string[] = [
     'Get up',
     'Brush teeth',
     'Take a shower',
     'Check e-mail',
     'Walk dog',
   ];
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  todo: string[] = [
+    'Get to work',
+    'Pick up groceries',
+    'Go home',
+    'Fall asleep',
+  ];
+  inProgress = [];
+  done = [];
+
+  getListData(name: string): string[] {
+    switch (name) {
+      case 'ideas':
+        return this.ideas;
+      case 'todo':
+        return this.todo;
+      case 'in progress':
+        return this.inProgress;
+      case 'done':
+        return this.done;
+      default:
+        return [];
+    }
+  }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
