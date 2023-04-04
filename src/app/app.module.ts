@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { MainViewComponent } from './pages/main-view/main-view.component';
 import { BarComponent } from './components/bar/bar.component';
 import { BoardComponent } from './components/board/board.component';
-import { ColumnFieldComponent } from './column-field/column-field.component';
+import { ColumnFieldComponent } from './components/column-field/column-field.component';
+import { ColumnComponent } from './components/column/column.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,11 @@ import { ColumnFieldComponent } from './column-field/column-field.component';
     MainViewComponent,
     BarComponent,
     BoardComponent,
-    ColumnFieldComponent
+    ColumnFieldComponent,
+    ColumnComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
