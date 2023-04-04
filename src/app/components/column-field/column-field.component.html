@@ -1,10 +1,32 @@
 <div class="columns">
-  <app-column name="ideas">
-    <app-task></app-task>
-    <app-task></app-task>
-    <app-task></app-task>
+  <app-column
+    cdkDropList
+    #ideasList="cdkDropList"
+    [cdkDropListData]="ideas"
+    [cdkDropListConnectedTo]="[todoList]"
+    (cdkDropListDropped)="drop($event)"
+    name="ideas"
+  >
+    <app-task
+      *ngFor="let item of ideas"
+      taskText="{{ item }}"
+      cdkDrag
+    ></app-task>
   </app-column>
-  <app-column name="todo"></app-column>
+  <app-column
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[ideasList]"
+    (cdkDropListDropped)="drop($event)"
+    name="todo"
+  >
+    <app-task
+      *ngFor="let item of todo"
+      taskText="{{ item }}"
+      cdkDrag
+    ></app-task>
+  </app-column>
   <app-column name="in progress"></app-column>
   <app-column name="done"></app-column>
 </div>
