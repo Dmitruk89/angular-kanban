@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainViewComponent } from './pages/main-view/main-view.component';
 import { BarComponent } from './components/bar/bar.component';
 import { BoardComponent } from './components/board/board.component';
+import { ColumnFieldComponent } from './column-field/column-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
     BarComponent,
-    BoardComponent
+    BoardComponent,
+    ColumnFieldComponent
   ],
   imports: [
     BrowserModule,
