@@ -1,15 +1,13 @@
-<div class="columns" cdkDropListGroup>
-  <app-column
-    *ngFor="let colName of columns"
-    cdkDropList
-    [cdkDropListData]="getListData(colName)"
-    (cdkDropListDropped)="drop($event)"
-    name="{{ colName }}"
-  >
-    <app-task
-      *ngFor="let item of getListData(colName)"
-      taskText="{{ item }}"
-      cdkDrag
-    ></app-task>
-  </app-column>
-</div>
+<app-column
+  *ngFor="let colName of columns"
+  cdkDropList
+  [cdkDropListData]="getListData(colName)"
+  (cdkDropListDropped)="drop($event)"
+  name="{{ colName }}"
+>
+  <app-task
+    *ngFor="let item of getListData(colName)"
+    taskText="{{ item }}"
+    cdkDrag
+  ></app-task>
+</app-column>

@@ -15,7 +15,7 @@ export class ColumnFieldComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  columns: string[] = ['ideas', 'todo', 'in progress', 'done'];
+  columns: string[] = ['ideas', 'todo', 'in progress', 'done', 'postponed'];
 
   ideas: string[] = [
     'Get up',
